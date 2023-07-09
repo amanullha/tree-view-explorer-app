@@ -11,8 +11,6 @@ const Folder = () => {
             try {
                 const response = await fetch('https://tree-view-xplorer.vercel.app/folders/structure');
                 const data = await response.json();
-                const mainFolder=data.data;
-                delete mainFolder.subFolders;
                 setFolders(data.data);
             } catch (error) {
                 console.error('Error fetching folders:', error);
