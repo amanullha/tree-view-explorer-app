@@ -75,7 +75,7 @@ const SingleFolder = (params: any) => {
                             <>
                                 {/* subFolder?.map(fol=><SingleFolder key={fol._id} folder={fol}/>) */}
                                 {
-                                    subFolder?.map(f => {
+                                    subFolder?.map((f:any) => {
                                         return (
                                             // <h1 className='text-black'>hello</h1>
                                             <SingleFolder key={f?._id} folder={f} />
