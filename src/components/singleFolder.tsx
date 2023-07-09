@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const SingleFolder = (params: any) => {
 
-    const [open, setOpen] = useState(0)
+    const [open, setOpen] = useState(false)
     const [folderId, setFolderId] = useState('')
     const folder: any = params?.folder;
     const [subFolder, setSubfolder] = useState([])
@@ -14,13 +14,16 @@ const SingleFolder = (params: any) => {
     const handleFolderOpen = async(id: string) => {
         console.log("id ", id);
 
-        setOpen(open ^ 1);
+        
         if (open) {
-            setFolderId(id);
-            await fetchData();
+            setOpen(false);
+            setFolderId("");
+            setSubfolder([]);
         }
         else {
-            setFolderId("");
+            setOpen(true);
+            setFolderId(id);
+            await fetchData();
         }
     }
 
