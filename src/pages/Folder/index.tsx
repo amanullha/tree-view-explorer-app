@@ -24,7 +24,7 @@ const Folder = () => {
     return (
         <div className='w-full'>
             <h1>Folder Structure</h1>
-            <div className='w-full min-h-max' >
+            {/* <div className='w-full min-h-max' >
 
                 {
                     <ul role="list" className="flex flex-col items-center justify-center w-full divide-y divide-gray-100">
@@ -43,7 +43,7 @@ const Folder = () => {
 
 
 
-            </div>
+            </div> */}
         </div>
     );
 };
