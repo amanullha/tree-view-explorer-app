@@ -3,7 +3,7 @@ import SingleFolder from '@/components/singleFolder';
 import { useEffect, useState } from 'react';
 
 const Folder = () => {
-    const [folders, setFolders] = useState([]);
+    const [folders, setFolders] = useState<any>([]);
 
     useEffect(() => {
         // Fetch folders data

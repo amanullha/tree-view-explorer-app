@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 
 const SingleFolder = (params: any) => {
 
-    const [open, setOpen] = useState(false)
-    const [folderId, setFolderId] = useState('')
+    const [open, setOpen] = useState<boolean>(false)
+    const [folderId, setFolderId] = useState<string>('')
     const folder: any = params?.folder;
-    const [subFolder, setSubfolder] = useState([])
+    const [subFolder, setSubfolder] = useState<any>([])
 
     console.log("subFolders: ", folder);
 
